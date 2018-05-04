@@ -1,1 +1,1 @@
-source ${PWD}/os/file/path.sh
+source $LIB_HOME/fslib/os/file/path.sh

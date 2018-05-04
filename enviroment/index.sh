@@ -1,2 +1,2 @@
-source ${PWD}/enviroment/debug.sh
-source ${PWD}/enviroment/extension.sh
+source $LIB_HOME/fslib/enviroment/debug.sh
+source $LIB_HOME/fslib/enviroment/extension.sh

@@ -7,13 +7,13 @@ function input()
         read -p "$msg " userInput
     done
 
-    source ${PWD}/input/get/get.sh
-    source ${PWD}/input/finverse/finverse.sh
-    source ${PWD}/input/flower/flower.sh
-    source ${PWD}/input/fupper/fupper.sh
-    source ${PWD}/input/inverse/inverse.sh
-    source ${PWD}/input/lower/lower.sh
-    source ${PWD}/input/unset/unset.sh
-    source ${PWD}/input/upper/upper.sh
+    source $LIB_HOME/fslib/input/get/get.sh
+    source $LIB_HOME/fslib/input/finverse/finverse.sh
+    source $LIB_HOME/fslib/input/flower/flower.sh
+    source $LIB_HOME/fslib/input/fupper/fupper.sh
+    source $LIB_HOME/fslib/input/inverse/inverse.sh
+    source $LIB_HOME/fslib/input/lower/lower.sh
+    source $LIB_HOME/fslib/input/unset/unset.sh
+    source $LIB_HOME/fslib/input/upper/upper.sh
 
 }; export -f input
