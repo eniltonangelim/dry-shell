@@ -3,10 +3,19 @@
 #Contato: enilton.angelim@gmail.com
 #vim: set ts=4
 
-source ${PWD}/enviroment/index.sh
-source ${PWD}/input/index.sh
-source ${PWD}/os/index.sh
-source ${PWD}/is/index.sh
+case ${0%/*} in
+    ${0##*/}) export LIB_HOME="./";;
+    \.) export LIB_HOME="./";;
+    *) export LIB_HOME=${0%/*};;
+esac
+
+# Lib functions shell
+source $LIB_HOME/fslib/os/index.sh
+source $LIB_HOME/fslib/is/index.sh
+source $LIB_HOME/fslib/configure/set.sh
+
+# Utility: Docker installer
+source $LIB_HOME/util/installDocker.sh
 
 export userInput='teste AUTOMATIZADO'
 input
