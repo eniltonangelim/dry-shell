@@ -6,13 +6,18 @@ Adicione a biblioteca no seu projeto
 git submodule add ssh://git@gitlab.f13.com.br:7222/sysadmin/fun-shell.git fslib
 ```
 
-Exemplos 
+Exemplo
 
 ```bash
-source ${PWD}/enviroment/index.sh
-source ${PWD}/input/index.sh
-source ${PWD}/os/index.sh
-source ${PWD}/is/index.sh
+export LIB_HOME='/home/enilton/workspace/fun-shell'
+
+# Lib functions shell
+source $LIB_HOME/fslib/os/index.sh
+source $LIB_HOME/fslib/is/index.sh
+source $LIB_HOME/fslib/configure/set.sh
+
+# Utility: Docker installer
+source $LIB_HOME/util/installDocker.sh
 
 export userInput='teste AUTOMATIZADO'
 input
