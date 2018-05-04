@@ -67,12 +67,10 @@ fi
 ~/workspace/fun-shell$ time.is.date.after? 'Fri May  4 17:18:08' 'Fri May  4 16:18:08' ; echo $?
 > 0
 
-~/workspace/fun-shell$ time.is.date.before? 'Fri May  4 16:18:09' 'Fri May  4 16:18:08' && ech
-o sim || echo não
+~/workspace/fun-shell$ time.is.date.before? 'Fri May  4 16:18:09' 'Fri May  4 16:18:08' && echo sim || echo não
 > não
 
-~/workspace/fun-shell$ time.is.date.before? 'Fri May  4 16:18:04' 'Fri May  4 16:18:08' && ech
-o sim || echo não
+~/workspace/fun-shell$ time.is.date.before? 'Fri May  4 16:18:04' 'Fri May  4 16:18:08' && echo sim || echo não
 > sim
 
 ```
