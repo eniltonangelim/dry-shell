@@ -3,11 +3,7 @@
 #Contato: enilton.angelim@gmail.com
 #vim: set ts=4
 
-case ${0%/*} in
-    ${0##*/}) export LIB_HOME="./";;
-    \.) export LIB_HOME="./";;
-    *) export LIB_HOME=${0%/*};;
-esac
+export LIB_HOME='/home/enilton/workspace/fun-shell'
 
 # Lib functions shell
 source $LIB_HOME/fslib/os/index.sh
