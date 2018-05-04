@@ -1,2 +1,2 @@
-source $LIB_HOME/fslib/os/file/index.sh
-source $LIB_HOME/fslib/os/cache/index.sh
+source $LIB_HOME/os/file/index.sh
+source $LIB_HOME/os/cache/index.sh

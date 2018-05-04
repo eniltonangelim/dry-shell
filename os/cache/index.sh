@@ -1,2 +1,2 @@
-source $LIB_HOME/fslib/os/cache/cache.sh
-source $LIB_HOME/fslib/os/cache/purge.sh
+source $LIB_HOME/os/cache/cache.sh
+source $LIB_HOME/os/cache/purge.sh
