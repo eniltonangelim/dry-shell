@@ -1,0 +1,1 @@
+source $LIB_HOME/array/contains/init.sh
