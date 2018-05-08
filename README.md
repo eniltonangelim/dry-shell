@@ -6,40 +6,9 @@ Adicione a biblioteca no seu projeto
 git submodule add ssh://git@gitlab.f13.com.br:7222/sysadmin/fun-shell.git fslib
 ```
 
-Exemplo
+## Documentation (coming soon)
 
 ```bash
-export LIB_HOME='/home/enilton/workspace/fun-shell'
-
-# Lib functions shell
-source $LIB_HOME/os/index.sh
-source $LIB_HOME/is/index.sh
-source $LIB_HOME/configure/set.sh
-
-# Utility: Docker installer
-source $LIB_HOME/util/installDocker.sh
-
-export userInput='teste AUTOMATIZADO'
-input
-#enviroment.debug
-if [[ `input.inverse` == 'TESTE automatizado' ]];then 
-    echo 'Input inverse it`s work!'
-fi
-
-#enviroment.debug
-if ! os.file.path read "/root"; then
-    echo 'Path read permisiso it`s work!'
-fi
-
-#enviroment.debug
-if ! is.ip.v4? 113.213.1s3.13 ;then
-    echo 'Ip v4 test it`s work!'
-fi
-
-
-:heart:
-
-
 ~/workspace/fun-shell$ is.email? 113.213.13.1s3 && { echo sim  ;} || echo não
 > não
 
@@ -72,5 +41,26 @@ fi
 
 ~/workspace/fun-shell$ time.is.date.before? 'Fri May  4 16:18:04' 'Fri May  4 16:18:08' && echo sim || echo não
 > sim
+
+nomes=( enilton patricia joao erica paulo junior julho )
+~/workspace/fun-shell$ array.filter \${nomes[@]}  e
+> enilton
+> erica
+~/workspace/fun-shell$ array.filter \${nomes[@]}  j
+> joao
+> junior
+> julho
+~/workspace/fun-shell$ array.filter \${nomes[@]}  ju
+> junior
+> julho
+
+menu.select "Escolha o IP: " "`network.ip.v4.list`"
+1) 10.254.252.56
+2) 127.0.0.1
+3) 172.17.0.1
+4) 192.168.124.101
+5) Q to quit
+Escolha o IP: 2
+> 2
 
 ```
