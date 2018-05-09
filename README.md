@@ -33,62 +33,152 @@ First lowercase
 > fOO bAR bAZ
 ```
 
-
-
+Lowercase
 
 ```bash
-~/workspace/fun-shell$ is.email? 113.213.13.1s3 && { echo sim  ;} || echo não
-> não
+~$ string.lower FOO BAR BAZ
+> foo bar baz
+```
 
-~/workspace/fun-shell$ is.email? dasdas@dsadas && { echo sim  ;} || echo não
-> não
+Other(s):
 
-~/workspace/fun-shell$ is.email? dasdas@dsadas.com && { echo sim  ;} || echo não
-> sim
+- string.flower STRING
+- string.inverse STRING
+- string.finverse STRING
+- string.fupper STRING
+- string.lower STRING
+- string.upper STRING
 
-~/workspace/fun-shell$ time.unix.to-datetime 1521451449
+## Tests
+
+- email
+
+```bash
+~$ is.email? 113.213.13.1s3
+> false
+```
+
+```bash
+~$ is.email? dasdas@dsadas
+> false
+```
+
+```bash
+~$ is.email? dasdas@dsadas.com
+> true
+```
+
+- IPv4
+
+```bash
+~$ is.ip.v4? 113.213.13.13
+> true
+```
+
+```bash
+~$ is.ip.v4? 113.213.13.1s3
+> false
+```
+
+## Date functions
+
+Unixtimestamp to datetime
+
+```bash
+~$ time.unix.to-datetime 1521451449
 > Mon Mar 19 06:24:09 -03 2018
+```
 
-~/workspace/fun-shell$ time.unix.from-datetime "Mon Mar 19 06:24:09 -03 2018"
+Datetime to unixtimestamp
+
+```bash
+~$ time.unix.from-datetime "Mon Mar 19 06:24:09 -03 2018"
 > 1521451449
+```
 
-~/workspace/fun-shell$ is.ip.v4? 113.213.13.13 && { echo sim  ;} || echo não
-> sim
+Relative position of two Datetime instances
 
-~/workspace/fun-shell$ is.ip.v4? 113.213.13.1s3 && { echo sim  ;} || echo não
-> não
+- After
 
-~/workspace/fun-shell$ time.is.date.after? 'Fri May  4 16:18:08' 'Fri May  4 16:18:08' ; echo $?
-> 1
+```bash
+~$ time.is.date.after? 'Fri May  4 16:18:08' 'Fri May  4 16:18:08'
+> false
+```
 
-~/workspace/fun-shell$ time.is.date.after? 'Fri May  4 17:18:08' 'Fri May  4 16:18:08' ; echo $?
-> 0
+```bash
+~$ time.is.date.after? 'Fri May  4 17:18:08' 'Fri May  4 16:18:08'
+> true
+```
 
-~/workspace/fun-shell$ time.is.date.before? 'Fri May  4 16:18:09' 'Fri May  4 16:18:08' && echo sim || echo não
-> não
+- Before
 
-~/workspace/fun-shell$ time.is.date.before? 'Fri May  4 16:18:04' 'Fri May  4 16:18:08' && echo sim || echo não
-> sim
+```bash 
+~$ time.is.date.before? 'Fri May  4 16:18:09' 'Fri May  4 16:18:08'
+> false
+```
 
-nomes=( enilton patricia joao erica paulo junior julho )
-~/workspace/fun-shell$ array.filter \${nomes[@]}  e
+```bash
+~$ time.is.date.before? 'Fri May  4 16:18:04' 'Fri May  4 16:18:08'
+> true
+```
+
+## Array functions
+
+var `nomes=( enilton patricia joao erica paulo junior julho )`
+
+- filter
+
+```bash
+~$ array.filter \${nomes[@]}  e
 > enilton
 > erica
-~/workspace/fun-shell$ array.filter \${nomes[@]}  j
+```
+
+```bash
+~$ array.filter \${nomes[@]}  j
 > joao
 > junior
 > julho
-~/workspace/fun-shell$ array.filter \${nomes[@]}  ju
+```
+
+```bash
+~$ array.filter \${nomes[@]}  ju
 > junior
 > julho
+```
 
-menu.select "Escolha o IP: " "`network.ip.v4.list`"
+- contains
+
+```bash
+~$ array.contains \${nomes[@]} enilton
+> true
+```
+
+```bash
+$ array.contains \${nomes[@]} amy
+> false
+```
+
+## Menu
+
+- select
+
+```bash
+~$ menu.select "Choose the IP: " "`network.ip.v4.list`"
 1) 10.254.252.56
 2) 127.0.0.1
 3) 172.17.0.1
 4) 192.168.124.101
 5) Q to quit
-Escolha o IP: 2
-> 2
+Choose the IP: 2
 
+> 127.0.0.1
 ```
+
+## Network
+
+## Mail
+
+## Configure
+
+## OS
