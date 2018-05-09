@@ -8,6 +8,34 @@ git submodule add ssh://git@gitlab.f13.com.br:7222/sysadmin/fun-shell.git fslib
 
 ## Documentation (coming soon)
 
+
+### String functions
+
+`source string/index.sh`
+
+First uppercase
+
+```bash
+~$ string.fupper foo bar baz
+Foo Bar Baz
+```
+
+Uppercase
+
+```bash
+~$ string.upper foo bar baz
+```
+
+First lowercase
+
+```bash
+~$ string.flower FOO BAR BAZ
+> fOO bAR bAZ
+```
+
+
+
+
 ```bash
 ~/workspace/fun-shell$ is.email? 113.213.13.1s3 && { echo sim  ;} || echo não
 > não
