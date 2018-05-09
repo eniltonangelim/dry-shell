@@ -3,7 +3,7 @@
 Adicione a biblioteca no seu projeto
 
 ```
-git submodule add ssh://git@gitlab.f13.com.br:7222/sysadmin/fun-shell.git fslib
+git submodule add https://github.com/eniltonangelim/dry-shell.git fslib
 ```
 
 ## Documentation (coming soon)
@@ -182,3 +182,5 @@ Choose the IP: 2
 ## Configure
 
 ## OS
+
+## async
