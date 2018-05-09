@@ -1,7 +1,6 @@
 function async.search.in () {
     local filename="$1"
     local expression="$2"
-    export search_in_PID
 
     exec 7>&1
 
