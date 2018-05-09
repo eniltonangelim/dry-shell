@@ -1,3 +1,5 @@
+# Clean code is missing
+# Dead code  mode on xD
 function network.ip.v4.list (){
     local listAddress=()
     local i

@@ -51,7 +51,10 @@ Other(s):
 
 ## Tests
 
+`source is/index.sh`
+
 - email
+
 
 ```bash
 ~$ is.email? 113.213.13.1s3
@@ -79,6 +82,12 @@ Other(s):
 ~$ is.ip.v4? 113.213.13.1s3
 > false
 ```
+
+Other(s):
+
+- number
+- email
+- ip.v4
 
 ## Date functions
 
@@ -184,3 +193,22 @@ Choose the IP: 2
 ## OS
 
 ## async
+
+
+- Search expression in file
+
+`~$ time async.search.in /var/log/syslog "firefox" && async.search.in /var/log/syslog cron`
+
+```text
+real    0m0.004s
+user    0m0.003s
+sys     0m0.001s
+May 9 00:08:06 f13note01-dev anacron[8593]: Job `cron.daily' terminated
+~/workspace/fun-shell$ May 9 00:12:56 f13note01-dev anacron[8593]: Job `cron.weekly' started
+May 9 00:12:56 f13note01-dev anacron[13060]: Updated timestamp for job `cron.weekly' to 2018-05-09
+...
+May 9 08:02:56 f13note01-dev systemd[1]: Started Run anacron jobs.
+May 9 09:35:04 f13note01-dev firefox[7482]: ../../../../gobject/gsignal.c:3492: signal name 'selection_changed' is invalid for instance '0x7fe224c6d3d0' of type 'MaiAtkType319'
+May 9 08:02:56 f13note01-dev anacron[17845]: Anacron 2.3 started on 2018-05-09
+May 9 09:36:00 f13note01-dev firefox[7482]: message repeated 34 times: [ ../../../../gobject/gsignal.c:3492: signal name 'selection_changed' is invalid for instance '0x7fe224c6d3d0' of type 'MaiAtkType319']
+```
