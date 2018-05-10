@@ -6,6 +6,13 @@ Adicione a biblioteca no seu projeto
 git submodule add https://github.com/eniltonangelim/dry-shell.git fslib
 ```
 
+Configure a localização da biblioteca
+
+```
+export LIB_HOME="path/to/fslib"
+```
+
+
 ## Documentation (coming soon)
 
 
