@@ -42,12 +42,19 @@ Lowercase
 
 Other(s):
 
-- string.flower STRING
-- string.inverse STRING
-- string.finverse STRING
-- string.fupper STRING
-- string.lower STRING
-- string.upper STRING
+| Name             | Param #1 | Param #2 | Param #3 |
+|:-----------------|:--------:|:--------:|:--------:|
+| string.flower    |   TEXT   |          |          |
+| string.inverse   |   TEXT   |          |          |
+| string.finverse  |   TEXT   |          |          |
+| string.fupper    |   TEXT   |          |          |
+| string.lower     |   TEXT   |          |          |
+| string.upper     |   TEXT   |          |          |
+| string.lstrip    |   TEXT   | DEL STR  |          |
+| string.rstrip    |   TEXT   | DEL STR  |          |
+| string.freplace  |   TEXT   | OLD STR  | NEW STR  |
+| string.replace   |   TEXT   | OLD STR  | NEW STR  |
+
 
 ## Tests
 
@@ -138,20 +145,20 @@ var `nomes=( enilton patricia joao erica paulo junior julho )`
 - filter
 
 ```bash
-~$ array.filter \${nomes[@]}  e
+~$ array.filter nomes  e
 > enilton
 > erica
 ```
 
 ```bash
-~$ array.filter \${nomes[@]}  j
+~$ array.filter nomes  j
 > joao
 > junior
 > julho
 ```
 
 ```bash
-~$ array.filter \${nomes[@]}  ju
+~$ array.filter nomes  ju
 > junior
 > julho
 ```
@@ -159,12 +166,12 @@ var `nomes=( enilton patricia joao erica paulo junior julho )`
 - contains
 
 ```bash
-~$ array.contains \${nomes[@]} enilton
+~$ array.contains nomes enilton
 > true
 ```
 
 ```bash
-$ array.contains \${nomes[@]} amy
+$ array.contains nomes amy
 > false
 ```
 
@@ -183,14 +190,6 @@ Choose the IP: 2
 
 > 127.0.0.1
 ```
-
-## Network
-
-## Mail
-
-## Configure
-
-## OS
 
 ## async
 
@@ -228,3 +227,17 @@ prov> prov> ckr domain foobar.com.br hythalo@foobar.com.br adminLoginAs
 ALLOWED
 prov> 
 ```
+
+## Network
+
+## Mail
+
+## Configure
+
+## OS
+
+## Enviroment
+
+## has
+
+## math

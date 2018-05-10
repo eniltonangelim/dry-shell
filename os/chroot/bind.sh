@@ -30,16 +30,11 @@ function os.chroot.bind() {
         return $(true)
     fi
 
-    if os.file.path write $fstab;then
-        echo "
+    echo "
 proc    $root/proc      proc    noauto,nodev,noexec,nosuid 0 0
 sys     $root/sys       sysfs   defaults,noauto            0 0
 /dev    $root/dev       none    bind,noauto                0 0
 pts     $root/dev/pts   devpts  gid=5,noauto               0 0
         " >> $fstab
-        return $(true)
-    else
-        return $(false)
-    fi
 
 } ; export -f os.chroot.bind
