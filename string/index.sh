@@ -4,3 +4,7 @@ source $LIB_HOME/string/fupper/init.sh
 source $LIB_HOME/string/inverse/init.sh
 source $LIB_HOME/string/lower/init.sh
 source $LIB_HOME/string/upper/init.sh
+source $LIB_HOME/string/freplace/init.sh
+source $LIB_HOME/string/replace/init.sh
+source $LIB_HOME/string/lstrip/init.sh
+source $LIB_HOME/string/rstrip/init.sh
