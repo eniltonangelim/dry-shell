@@ -235,6 +235,19 @@ ALLOWED
 prov> 
 ```
 
+## Screen dialog
+
+`source screen/index.sh`
+
+```bash
+~$ screen.box.dialog 1 1 'Hello World!\n\Willkommen!'
+
+ ┌──────────────┐
+ │ Hello World! │
+ │ Willkommen!  │
+ └──────────────┘
+```
+
 ## Network
 
 ## Mail
