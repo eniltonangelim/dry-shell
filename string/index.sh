@@ -8,3 +8,5 @@ source $LIB_HOME/string/freplace/init.sh
 source $LIB_HOME/string/replace/init.sh
 source $LIB_HOME/string/lstrip/init.sh
 source $LIB_HOME/string/rstrip/init.sh
+source $LIB_HOME/string/rfill/init.sh
+source $LIB_HOME/string/lfill/init.sh
