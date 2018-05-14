@@ -6,8 +6,9 @@ function screen.box.dialog
 {
     declare -i indice=0
     declare -i positionY=$1
-    declare -i positionX=$2
-    local message=${3@E}
+    declare -i positionX=$2    
+    #local message=${3@E} # Only bash 4.4
+    local message=$(echo -e "$3")
     local width=$(( $(wc -L <<< "$message") + 2))   # wc -L dá o tamanho da maior linha
     local lines                                     # Vetor que conterá as linhas (origem 1)
 

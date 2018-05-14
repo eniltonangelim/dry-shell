@@ -6,7 +6,7 @@ function network.ip.v4.list (){
     while read line;do 
         [[ $line =~ .*\|\-\-.*[1-9]{1,3}$ ]] &&\
             ! [[ $line =~ .*255$ ]] && {
-                ! array.contains \${listAddress[@]} ${line#\|\-\-} && listAddress[$[i++]]=${line#\|\-\- }
+                ! array.contains listAddress ${line#\|\-\-} && listAddress[$[i++]]=${line#\|\-\- }
             }
     done</proc/net/fib_trie
     echo ${listAddress[@]}
