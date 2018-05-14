@@ -1,5 +1,6 @@
-function string.lfill () {
-    local string=${1// /^}    # Trocando eventuais espaços preexistentes
+#Autor Julio C Neves
+
+function string.lfill () {    local string=${1// /^}    # Trocando eventuais espaços preexistentes
     declare -i size=$2
     local char=$3
     local fillString

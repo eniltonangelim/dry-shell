@@ -1,3 +1,4 @@
+#Autor Julio C. Neves
 function string.rfill () {
     local string=${1// /^}    # Trocando eventuais espaços preexistentes
     declare -i size=$2
