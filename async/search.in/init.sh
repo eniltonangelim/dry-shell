@@ -14,4 +14,4 @@ function async.search.in () {
 
     exec 7>&1 7>&-
 
-}; export -f 
+}; export -f async.search.in

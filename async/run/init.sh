@@ -15,4 +15,4 @@ function async.run () {
 
     exec 7>&1 7>&-
 
-}; export -f 
+}; export -f async.run
