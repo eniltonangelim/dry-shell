@@ -145,6 +145,46 @@ Relative position of two Datetime instances
 > true
 ```
 
+Datetime sequence Strategy (protocol)
+
+20 minutes ago
+
+```
+time.range.strategy 20 1 'minutes' '%h %y %m:%d %H:%M:%S'
+```
+
+20 hours ago
+
+```
+time.range.strategy 20 1 'hours' '%h %y %m:%d %H:%M:%S'
+```
+
+20 days ago
+
+```
+time.range.strategy 20 1 'days' '%h %y %m:%d %H:%M:%S'
+```
+
+Datetime sequence In minutes
+
+```
+time.range.in-minutes '' '' '%Y-%m-%d %H:%M:%S'
+```
+
+```
+time.range.in-minutes 23 '' '%Y-%m-%d %H:%M:%S'
+```
+
+```
+time.range.in-minutes 23 3 '%Y-%m-%d %H:%M:%S'
+```
+
+Other's:
+
+- time.range.in-seconds
+- time.range.in-hours
+- time.range.in-days
+
 ## Array functions
 
 var `nomes=( enilton patricia joao erica paulo junior julho )`
