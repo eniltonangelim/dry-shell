@@ -1,0 +1,1 @@
+source $LIB_HOME/has/file/same/inode/init.sh

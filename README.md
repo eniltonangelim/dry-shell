@@ -300,4 +300,50 @@ prov>
 
 ## has
 
+`source math/index.sh`
+
+- Test inodes:
+
+```bash
+has.file.same.inode? /etc/hosts /etc/hosts.deny 
+```
+
 ## math
+
+`source math/index.sh`
+
+- add
+
+```bash
+math.add 12 31
+```
+
+- div
+
+```bash
+ math.div 10 2
+```
+
+- mod
+
+```bash
+math.mod 10 2
+```
+
+- mul
+
+```bash
+math.mul 10 3
+```
+
+- pow
+
+```bash
+math.pow 
+```
+
+- sub
+
+```bash
+math.sub 5 3
+```
