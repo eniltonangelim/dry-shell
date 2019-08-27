@@ -3,6 +3,6 @@ function array.filter() {
     local listItemLength=`eval echo \\${!$listItem[@]}`
     local expression="${2}"
     for fi in $listItemLength;do
-        [[ `eval echo \\${$listItem[$fi]}` =~ ^${expression:-null} ]] && eval echo \${$listItem[$fi]}
+        [[ `eval echo \\${$listItem[$fi]}` =~ ${expression:-null} ]] && eval echo \${$listItem[$fi]}
     done
 }; export -f array.filter

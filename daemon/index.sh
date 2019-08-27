@@ -1,0 +1,1 @@
+source $LIB_HOME/daemon/signal/index.sh
