@@ -17,7 +17,7 @@ function runnable() {
         echo "$1 is link of `readlink -f $1`" >> $log_file
     }
 
-    while read line; do is.file.link? $link && process $line; done <<< `find -L ${1:-/etc}` #-L symbolic links
+    while read line; do is.file.link? $line && process $line; done <<< `find -L ${1:-/etc}` #-L symbolic links
 }
 
 runnable /etc
